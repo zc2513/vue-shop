@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #fff;
+}
+.mint-header{
+	background-color: #32383f;
+	font-size: 18px;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color:#f40;
+}
+.clearfix:after,.clearfix:before{
+	content:"";
+	display:table;
+}
+.clearfix:after{
+	clear: both;
+}
+.clearfix {
+	*zoom:1;
+}
