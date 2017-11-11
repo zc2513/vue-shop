@@ -1,10 +1,8 @@
 <template>
 <div>
-	<mt-swipe :auto="2000" class="cls">
-	  <mt-swipe-item v-for="(item,index) in list" :key="index">
-	  		<img :src="item.img" height="500" width="800" alt="">
-	  </mt-swipe-item>
-	</mt-swipe>
+ <!-- 轮播图的组件引入 -->
+  <silder :imgId="id"></silder>
+  <!-- 九宫格的插件引入  -->
 	<div class="mui-content">
   		<ul class="mui-table-view mui-grid-view mui-grid-9">
   		    <li class="mui-table-view-cell mui-media mui-col-xs-4">
@@ -50,48 +48,26 @@
 </div>
 </template>
 <script>
-import requrl from "../comment/request.js"
-import { Swipe, SwipeItem } from 'mint-ui';//萝卜头
 import { Toast } from 'mint-ui';//---加载失败提示插件
+import silder from "@/comment/silder.vue"
 	export default{
 		data(){
 			return{
-				list:[]
+				list:[],
+        id:"getlunbo"
 			}
 		},
-		created(){
-			this.getImg()
-		},
-		methods:{
-			getImg(){
-          var url=requrl.textUrl+"/api/getlunbo";
-          // var url="http://vue.studyit.io/api/getlunbo";
-          this.$http.get(url).then(function(result){
-            if(result.body.status!=0){
-              Toast("加载失败！")
-            }
-            this.list=result.body.message;
-          })
-			}
-		}
-
+    components:{
+      silder
+    }
 	}
 </script>
 <style scoped>
+   /*九宫格样式开始*/
   .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
     line-height: 23px;
     height: 23px;
   }
-
-	.cls{
-		width: 100%;
-		height: 300px;
-		background-color: red;
-	}
-	.cls img{
-		width: 100%;
-		height: 100%;
-	}
 	.mui-grid-view.mui-grid-9{
 		background-color: #fff;
 		border: 0;
@@ -109,9 +85,6 @@ import { Toast } from 'mint-ui';//---加载失败提示插件
     height: 50px;
     background-repeat: round;
   }
-
-
-
   .mui-icon-home:before{  
    background-image: url(../assets/1.png);
   }
@@ -124,5 +97,5 @@ import { Toast } from 'mint-ui';//---加载失败提示插件
   .mui-icon-phone:before{  
    background-image: url(../assets/6.png);
   }
-
+  /*九宫格样式结束*/
 </style>

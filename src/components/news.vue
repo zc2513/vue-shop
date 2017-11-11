@@ -43,14 +43,12 @@ import { Toast } from 'mint-ui';
 			this.getData();
 		},
 		methods:{
-			getData(){
+			getData(){//获取当前页面的展示数据
 				var url=requrl.textUrl+"/api/getnewslist";
-				// var url="http://vue.studyit.io/api/getnewslist";
 				this.$http.get(url).then(function(result){
 					if(result.body.status!=0){
 						Toast("获取页面失败")
 					}
-					console.log(result.body.message);
 					this.list=result.body.message
 				})
 			}

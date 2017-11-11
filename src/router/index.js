@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//import HelloWorld from '@/components/HelloWorld'
-//需要的vue组件引入
 import home from "@/components/home"
 import vip from "@/vip/vip"
 import shopcar from "@/shopcar/shopcar"
@@ -22,7 +20,7 @@ export default new Router({
       redirect:'/home'
     },
     {
-    	path:"/home",
+    	path:"/home/",
     	component:home
     },
     {

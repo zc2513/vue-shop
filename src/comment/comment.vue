@@ -1,3 +1,4 @@
+<!-- 提交控件！  -->
 <template>
 	<div>
 		<div class="content">
@@ -22,35 +23,6 @@
 
 		</div>
 		<mt-button type="default" @click="getData" size="large" plain>加载更多...</mt-button>
-				<!-- <ul class="mui-table-view">
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-right" src="../images/yuantiao.jpg">
-							<div class="mui-media-body">
-								远眺
-								<p class='mui-ellipsis'>静静的看这个世界，最后终于疯了</p>
-							</div>
-						</a>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-right" src="../images/shuijiao.jpg">
-							<div class="mui-media-body">
-								幸福
-								<p class='mui-ellipsis'>	能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-							</div>
-						</a>
-					</li>
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
-							<img class="mui-media-object mui-pull-right" src="../images/muwu.jpg">
-							<div class="mui-media-body">
-								木屋
-								<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
-							</div>
-						</a>
-					</li>
-				</ul> -->
 	</div>
 </template>
 <script>
@@ -79,7 +51,6 @@ import { Toast } from 'mint-ui';
 						return;
 					}
 					this.list=this.list.concat(result.body.message);
-					// this.list=result.body.message
 				})
 			},
 			setData(){
@@ -92,7 +63,6 @@ import { Toast } from 'mint-ui';
 						"add_time":new Date(),
 						"content":this.userVal
 					}].concat(this.list)
-					//this.getData();
 					this.userVal=""
 				})
 			}
