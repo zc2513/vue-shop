@@ -18,7 +18,8 @@
 	<div class="imgmin clearfix">
 		<ul>
 			<li v-for="(item,index) in list" :key="index">
-				<img :src="item.src" alt="">
+				<!-- <img :src="item.src" alt=""> -->
+				<img class="preview-img" :src="item.src" height="100" @click="$preview.open(index, list)">
 			</li>
 		</ul>
 	</div>
@@ -35,6 +36,7 @@ import comment from "@/comment/comment"
 import { Header } from 'mint-ui';
 import { Toast } from 'mint-ui';
 import requrl from "../../comment/request.js"
+import VuePreview from 'vue-preview'
 	export default{
 
 		data(){
@@ -56,16 +58,21 @@ import requrl from "../../comment/request.js"
 			getImg(){//获取图片
 				var url=requrl.textUrl+"/api/getthumimages/"+this.imgId;
 				this.$http.get(url).then(function(res){
-				/*	if(res.body.status!=0){
+					if(res.body.status!=0){
 						Toast("加载失败");
-					}*/
-					this.list=res.body.message;
+					}
+					for (var i=0;i<res.body.message.length;i++){
+						this.list.push({
+							src:res.body.message[i].src,
+							w:1200,
+							h:900
+						})
+					}					
 				})
 			},
 			getData(){
 				var url=requrl.textUrl+"/api/getimageInfo/"+this.imgId;
 				this.$http.get(url).then(function(res){
-					console.log(res.body)
 					this.imgInfo=res.body.message[0];
 				})
 			}

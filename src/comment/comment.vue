@@ -78,7 +78,6 @@ import { Toast } from 'mint-ui';
 						Toast("获取失败！!!!!");
 						return;
 					}
-					console.log(result.body.result);
 					this.list=this.list.concat(result.body.message);
 					// this.list=result.body.message
 				})
