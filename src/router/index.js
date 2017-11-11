@@ -10,6 +10,8 @@ import info from "@/newinfo/newinfo"
 import news from "@/components/news"
 import lazyPhone from "@/components/lazyPhoto/lazyPhoto.vue"
 import phoneInfo from "@/components/lazyPhoto/phoneInfo.vue"
+import shop from "@/components/shop/shop"
+import shopInfo from "@/components/shop/shopInfo"
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +51,14 @@ export default new Router({
     {
       path:"/lazyPhone/:imgId",
       component:phoneInfo
+    },
+    {
+      path:"/shop",
+      component:shop
+    },
+    {
+      path:"/shop/:shopId",
+      component:shopInfo
     }
   ]
 })
