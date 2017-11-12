@@ -2,7 +2,7 @@
 
 		<div>
 			<div>
-		<mt-header title="图片详情页">
+		<mt-header title="新闻详情">
   		<router-link to="/news" slot="left">
     	<mt-button icon="back">返回</mt-button>
  		 </router-link>

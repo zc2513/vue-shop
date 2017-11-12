@@ -50,7 +50,6 @@ import { Toast } from 'mint-ui';
 	.cls{
 		width: 100%;
 		height: 300px;
-		background-color: red;
 	}
 	.cls img{
 		width: 100%;

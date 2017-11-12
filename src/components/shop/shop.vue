@@ -1,13 +1,13 @@
 <template>
 	<section>
-		<div>
-			<mt-header title="图片详情页">
+		<div><!-- 返回按钮设置！  -->
+			<mt-header title="商品专场">
   			<router-link to="/home" slot="left">
     		<mt-button icon="back">返回</mt-button>
  			 </router-link>
 			</mt-header>
 		</div>
-
+		<!-- 图文列表插件引入与详情内容的的修改 -->
 		<div>
 			<ul class="mui-table-view mui-grid-view">
 		        <li class="mui-table-view-cell mui-media mui-col-xs-6"  v-for="(item,index) in list" :key="index">
@@ -29,6 +29,7 @@
 		        </li>
 			</ul>
 		</div>
+		<!-- 图文列表插件引入与详情内容的的修改结束 -->
 		<div>
 			<mt-button type="default" size="large" @click="getData" v-if="flag">加载更多...</mt-button>			
 		</div>
@@ -57,6 +58,7 @@ import { Button } from 'mint-ui';
 				this.$http.get(url).then(function(response){
 					if(response.body.status!=0){
 						Toast("数据加载失败");
+						return;
 					}
 					this.list=this.list.concat(response.body.message);
 					if(response.body.message.length<=0||response.body.message.length<10){
@@ -69,6 +71,7 @@ import { Button } from 'mint-ui';
 	}
 </script>
 <style scoped>
+/*商品展示的css开始*/
 	*{
 		box-sizing: border-box;
 	}
@@ -111,7 +114,9 @@ import { Button } from 'mint-ui';
 	.box{
 		background-color: #eee;
 	}
-	.mint-header{
+	/*商品展示的css结束*/
+	.mint-header{/*返回背景设置---*/
 		background-color: #5b8fb5;
 	}
+
 </style>

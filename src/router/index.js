@@ -10,6 +10,8 @@ import lazyPhone from "@/components/lazyPhoto/lazyPhoto.vue"
 import phoneInfo from "@/components/lazyPhoto/phoneInfo.vue"
 import shop from "@/components/shop/shop"
 import shopInfo from "@/components/shop/shopInfo"
+import twjs from "@/components/shop/tejs"
+import pl from "@/components/shop/pl"
 Vue.use(Router)
 
 export default new Router({
@@ -57,6 +59,14 @@ export default new Router({
     {
       path:"/shop/:shopId",
       component:shopInfo
+    },
+    {
+      path:"/shop/getdesc/:twId",
+      component:twjs
+    },
+    {
+      path:"/shop/pl/:id",
+      component:pl
     }
   ]
 })

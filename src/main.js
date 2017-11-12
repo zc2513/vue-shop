@@ -10,23 +10,17 @@ import vuePreview from "vue-preview"
 import 'mint-ui/lib/style.min.css'	
 import "../static/mui/dist/css/mui.css"
 import "../static/css/global.css"
-
+import "@/comment/getTime.js"//时间方法：
 
 //2.导入vue文件插件：
 import App from './App'
 import router from './router'
+//3.使用包--
 Vue.use(mintui);
 Vue.use(vueResource);
 Vue.use(moment);
 Vue.use(vuePreview);
-//Vue.config.productionTip = false//可有可无项
 
-/* eslint-disable no-new */
-Vue.filter("getTime",function(config,type){
-	var time;
-	time=moment(config).format(type); 
-	return time;
-})
 new Vue({
   el: '#app',
   router,

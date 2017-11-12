@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div>
-			<mt-header title="图片详情页">
+			<mt-header title="商品展示">
   			<router-link to="/home" slot="left">
     		<mt-button icon="back">返回</mt-button>
  			 </router-link>
