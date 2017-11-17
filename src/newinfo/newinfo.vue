@@ -1,13 +1,6 @@
 <template>
 
-		<div>
-			<div>
-		<mt-header title="新闻详情">
-  		<router-link to="/news" slot="left">
-    	<mt-button icon="back">返回</mt-button>
- 		 </router-link>
-		</mt-header>
-	</div>
+<div>
 	<div  class="cls">
 		<div>
 			<h3>{{list.title}}</h3>
@@ -19,7 +12,7 @@
 		<comment :cont="id"></comment>
 
 	</div>
-		</div>
+</div>
 </template>
 <script>
 import { Header } from 'mint-ui';
@@ -63,8 +56,5 @@ import comment from "@/comment/comment"
 	}
 	.tim{
 		padding: 5px 0;
-	}
-	.mint-header{
-		background-color: #5b8fb5;
 	}
 </style>

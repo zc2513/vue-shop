@@ -12,7 +12,7 @@
 			}
 		},
 		created(){
-
+			this.save();
 		},
 		methods:{
 			minus(){
@@ -37,13 +37,13 @@
 	span{
 		display: inline-block;
 		height: 26px;
-		width: 50px;
+		width: 40px;
 		border: 1px solid #ccc;
 		text-align: center;
 		line-height: 26px;
 	}
 	.w{
-		width: 30px;
+		width: 25px;
 		margin: 0px 1px ;
 	}
 </style>

@@ -1,16 +1,6 @@
 <template>
 	
 <div>
-	
-      	<div>
-			<mt-header title="新闻资讯">
-  			<router-link to="/home" slot="left">
-    		<mt-button icon="back">返回</mt-button>
- 			 </router-link>
-			</mt-header>
-		</div>
-
-
 	<div>
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media" v-for="(item,indext) in list" :key="indext">
@@ -68,8 +58,5 @@ import { Toast } from 'mint-ui';
 	}
 	.mui-table-view-cell{
 		padding:10px 15px;
-	}
-	.mint-header{
-		background-color: #5b8fb5;
 	}
 </style>

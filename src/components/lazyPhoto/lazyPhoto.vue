@@ -1,14 +1,5 @@
 <template>
 	<div>
-		<div>
-			<mt-header title="商品展示">
-  			<router-link to="/home" slot="left">
-    		<mt-button icon="back">返回</mt-button>
- 			 </router-link>
-			</mt-header>
-		</div>
-
-
 		<div class="box">
 			<ul class="clearfix">
 				<li @click="getImg(0)">全部</li>
@@ -121,8 +112,5 @@ import { Lazyload } from 'mint-ui';
 		position:absolute;
 		bottom: 0;
 		left: 0;
-	}
-	.mint-header{
-		background-color: #5b8fb5;
 	}
 </style>

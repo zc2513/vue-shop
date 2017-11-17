@@ -1,5 +1,12 @@
 <template>	
 	<section>
+		<div>
+			<mt-header title="商品详情页">
+  			<router-link to="/shop" slot="left">
+    		<mt-button icon="back">返回</mt-button>
+ 			 </router-link>
+			</mt-header>
+		</div>
 		<!-- 引入轮播图插件  -->
 		<div class="box">
 			<silder :imgId="config+id"></silder>
@@ -100,7 +107,11 @@ import {KEY,setItem} from "@/comment/localStorage.js"
 	}
 
 </script>
-<style scoped>	
+<style scoped>
+/*返回部分的背景色设置*/
+	.mint-header{
+		background-color: #5b8fb5;
+	}	
 /*盒子边框样式设置：*/	
 	.box{
 		border: 1px solid #eee;

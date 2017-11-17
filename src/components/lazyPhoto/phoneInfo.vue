@@ -2,14 +2,6 @@
 <div>
     <!-- 返回按钮  -->
 	<div>
-		<mt-header title="图片详情页">
-  		<router-link to="/lazyPhone" slot="left">
-    	<mt-button icon="back">返回</mt-button>
- 		 </router-link>
-		</mt-header>
-	</div>
-	
-	<div>
 		<h4 v-text="imgInfo.title"></h4>
 		<p>
 			<span >时间：{{imgInfo.add_time | getTime('YYYY-MM-DD HH:mm:ss')}}</span>&nbsp;&nbsp;
@@ -73,7 +65,6 @@ import VuePreview from 'vue-preview'
 						img.onload=function(){
 							var w=img.width;
 							var h=img.height;
-							console.log(b+"--"+w+"--"+h);
 							arr.push({
 								src:config.src,
 								w:w,
@@ -131,8 +122,5 @@ import VuePreview from 'vue-preview'
 	.p{
 		text-indent: 2em;
 		line-height: 28px;
-	}
-	.mint-header{
-		background-color: #5b8fb5;
 	}
 </style>
